@@ -9,8 +9,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-20T16:28:37.355Z[GMT]")public class BrandedFoodObjectNutrientsUsda   {
-  private Integer id = null;  private String name = null;  private BigDecimal per100g = null;  private String measurementUnit = null;  private BigDecimal min = null;  private BigDecimal max = null;  private BigDecimal median = null;  private Integer dataPoints = null;  private String footnote = null;  private String source = null;  private String description = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-21T14:08:32.177Z[GMT]")public class BrandedFoodObjectNutrientsUsda   {
+  private Integer id = null;  private String name = null;  private BigDecimal per100g = null;  private String measurementUnit = null;  private BigDecimal min = null;  private BigDecimal max = null;  private BigDecimal median = null;  private Integer rank = null;  private Integer dataPoints = null;  private String footnote = null;  private String description = null;
 
   /**
    * Nutrient ID
@@ -104,6 +104,19 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
 
   /**
+   * Nutrient rank
+   **/
+  
+  @Schema(description = "Nutrient rank")
+  @JsonProperty("rank")
+  public Integer getRank() {
+    return rank;
+  }
+  public void setRank(Integer rank) {
+    this.rank = rank;
+  }
+
+  /**
    * Number of observations on which the value is based
    **/
   
@@ -134,19 +147,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
    **/
   
   @Schema(description = "Description of the nutrient source")
-  @JsonProperty("source")
-  public String getSource() {
-    return source;
-  }
-  public void setSource(String source) {
-    this.source = source;
-  }
-
-  /**
-   * Description of how the food nutrient value was obtained
-   **/
-  
-  @Schema(description = "Description of how the food nutrient value was obtained")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -172,15 +172,15 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(min, brandedFoodObjectNutrientsUsda.min) &&
         Objects.equals(max, brandedFoodObjectNutrientsUsda.max) &&
         Objects.equals(median, brandedFoodObjectNutrientsUsda.median) &&
+        Objects.equals(rank, brandedFoodObjectNutrientsUsda.rank) &&
         Objects.equals(dataPoints, brandedFoodObjectNutrientsUsda.dataPoints) &&
         Objects.equals(footnote, brandedFoodObjectNutrientsUsda.footnote) &&
-        Objects.equals(source, brandedFoodObjectNutrientsUsda.source) &&
         Objects.equals(description, brandedFoodObjectNutrientsUsda.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, dataPoints, footnote, source, description);
+    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, rank, dataPoints, footnote, description);
   }
 
   @Override
@@ -195,9 +195,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    min: ").append(toIndentedString(min)).append("\n");
     sb.append("    max: ").append(toIndentedString(max)).append("\n");
     sb.append("    median: ").append(toIndentedString(median)).append("\n");
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
     sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
