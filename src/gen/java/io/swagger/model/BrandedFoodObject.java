@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="Please read the description of each field in this API response object example. By default, the value of each field is __null__. This indicates an unknown state or that no data exists.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-21T14:14:30.459Z[GMT]")public class BrandedFoodObject   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-21T23:19:12.726Z[GMT]")public class BrandedFoodObject   {
   private List<BrandedFoodObjectItems> items = new ArrayList<BrandedFoodObjectItems>();
 
   /**
