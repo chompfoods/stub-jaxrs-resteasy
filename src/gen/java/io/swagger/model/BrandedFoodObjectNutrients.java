@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing nutrient information from multiple sources")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T15:36:20.615Z[GMT]")public class BrandedFoodObjectNutrients   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T19:40:25.496Z[GMT]")public class BrandedFoodObjectNutrients   {
   private List<BrandedFoodObjectNutrientsChomp> chomp = new ArrayList<BrandedFoodObjectNutrientsChomp>();  private List<BrandedFoodObjectNutrientsUsda> usda = new ArrayList<BrandedFoodObjectNutrientsUsda>();
 
   /**
