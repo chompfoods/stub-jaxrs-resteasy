@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-21T23:19:12.726Z[GMT]")public class BrandedFoodObjectNutrientsChomp   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T12:50:39.964Z[GMT]")public class BrandedFoodObjectNutrientsChomp   {
   private String name = null;  private String measurementUnit = null;  private BigDecimal per100g = null;  private BigDecimal perServing = null;  private BigDecimal total = null;
 
   /**

@@ -9,8 +9,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-21T23:19:12.726Z[GMT]")public class BrandedFoodObjectPackage   {
-  private Integer quantity = null;  private Integer size = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T12:50:39.964Z[GMT]")public class BrandedFoodObjectPackage   {
+  private Integer quantity = null;  private String size = null;
 
   /**
    * Package quantity
@@ -31,10 +31,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
   
   @Schema(description = "Package size")
   @JsonProperty("size")
-  public Integer getSize() {
+  public String getSize() {
     return size;
   }
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
   }
 
