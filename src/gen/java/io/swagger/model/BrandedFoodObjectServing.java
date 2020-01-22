@@ -9,33 +9,20 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T12:50:39.964Z[GMT]")public class BrandedFoodObjectServing   {
-  private Integer size = null;  private String measurementUnit = null;  private String sizeFulltext = null;  private Integer total = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T12:55:43.476Z[GMT]")public class BrandedFoodObjectServing   {
+  private String size = null;  private String sizeFulltext = null;  private Integer total = null;
 
   /**
-   * Serving size
+   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
    **/
   
-  @Schema(description = "Serving size")
+  @Schema(description = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
   @JsonProperty("size")
-  public Integer getSize() {
+  public String getSize() {
     return size;
   }
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
-  }
-
-  /**
-   * Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
-   **/
-  
-  @Schema(description = "Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
-  @JsonProperty("measurement_unit")
-  public String getMeasurementUnit() {
-    return measurementUnit;
-  }
-  public void setMeasurementUnit(String measurementUnit) {
-    this.measurementUnit = measurementUnit;
   }
 
   /**
@@ -75,14 +62,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
     }
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
     return Objects.equals(size, brandedFoodObjectServing.size) &&
-        Objects.equals(measurementUnit, brandedFoodObjectServing.measurementUnit) &&
         Objects.equals(sizeFulltext, brandedFoodObjectServing.sizeFulltext) &&
         Objects.equals(total, brandedFoodObjectServing.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, measurementUnit, sizeFulltext, total);
+    return Objects.hash(size, sizeFulltext, total);
   }
 
   @Override
@@ -91,7 +77,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("class BrandedFoodObjectServing {\n");
     
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
     sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
