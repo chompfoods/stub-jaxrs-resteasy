@@ -14,7 +14,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T14:07:34.207Z[GMT]")public interface FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T15:36:20.615Z[GMT]")public interface FoodApiService {
       Response foodBrandedBarcodePhpGet(String code,SecurityContext securityContext)
       throws NotFoundException;
       Response foodBrandedIdPhpGet(Integer id,String source,SecurityContext securityContext)
