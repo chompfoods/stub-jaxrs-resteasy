@@ -8,28 +8,15 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
-@Schema(description="An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T13:41:42.038Z[GMT]")public class BrandedFoodObjectPackage   {
-  private Integer quantity = null;  private String size = null;
+@Schema(description="Serving information from as seen on ChompThis.com")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T13:41:42.038Z[GMT]")public class BrandedFoodObjectServingChomp   {
+  private String size = null;
 
   /**
-   * Package quantity
+   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
    **/
   
-  @Schema(description = "Package quantity")
-  @JsonProperty("quantity")
-  public Integer getQuantity() {
-    return quantity;
-  }
-  public void setQuantity(Integer quantity) {
-    this.quantity = quantity;
-  }
-
-  /**
-   * Package size
-   **/
-  
-  @Schema(description = "Package size")
+  @Schema(description = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
   @JsonProperty("size")
   public String getSize() {
     return size;
@@ -47,22 +34,20 @@ import io.swagger.v3.oas.annotations.media.Schema;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackage brandedFoodObjectPackage = (BrandedFoodObjectPackage) o;
-    return Objects.equals(quantity, brandedFoodObjectPackage.quantity) &&
-        Objects.equals(size, brandedFoodObjectPackage.size);
+    BrandedFoodObjectServingChomp brandedFoodObjectServingChomp = (BrandedFoodObjectServingChomp) o;
+    return Objects.equals(size, brandedFoodObjectServingChomp.size);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity, size);
+    return Objects.hash(size);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackage {\n");
+    sb.append("class BrandedFoodObjectServingChomp {\n");
     
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();

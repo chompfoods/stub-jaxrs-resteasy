@@ -4,51 +4,38 @@ import java.util.Objects;
 import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.model.BrandedFoodObjectServingChomp;
+import io.swagger.model.BrandedFoodObjectServingUsda;
 import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T13:02:22.260Z[GMT]")public class BrandedFoodObjectServing   {
-  private String size = null;  private String sizeFulltext = null;  private Integer total = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-22T13:41:42.038Z[GMT]")public class BrandedFoodObjectServing   {
+  private BrandedFoodObjectServingChomp chomp = null;  private BrandedFoodObjectServingUsda usda = null;
 
   /**
-   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
    **/
   
-  @Schema(description = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
-  @JsonProperty("size")
-  public String getSize() {
-    return size;
+  @Schema(description = "")
+  @JsonProperty("chomp")
+  public BrandedFoodObjectServingChomp getChomp() {
+    return chomp;
   }
-  public void setSize(String size) {
-    this.size = size;
-  }
-
-  /**
-   * Serving size description
-   **/
-  
-  @Schema(description = "Serving size description")
-  @JsonProperty("size_fulltext")
-  public String getSizeFulltext() {
-    return sizeFulltext;
-  }
-  public void setSizeFulltext(String sizeFulltext) {
-    this.sizeFulltext = sizeFulltext;
+  public void setChomp(BrandedFoodObjectServingChomp chomp) {
+    this.chomp = chomp;
   }
 
   /**
-   * Total servings
    **/
   
-  @Schema(description = "Total servings")
-  @JsonProperty("total")
-  public Integer getTotal() {
-    return total;
+  @Schema(description = "")
+  @JsonProperty("usda")
+  public BrandedFoodObjectServingUsda getUsda() {
+    return usda;
   }
-  public void setTotal(Integer total) {
-    this.total = total;
+  public void setUsda(BrandedFoodObjectServingUsda usda) {
+    this.usda = usda;
   }
 
 
@@ -61,14 +48,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
       return false;
     }
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
-    return Objects.equals(size, brandedFoodObjectServing.size) &&
-        Objects.equals(sizeFulltext, brandedFoodObjectServing.sizeFulltext) &&
-        Objects.equals(total, brandedFoodObjectServing.total);
+    return Objects.equals(chomp, brandedFoodObjectServing.chomp) &&
+        Objects.equals(usda, brandedFoodObjectServing.usda);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, sizeFulltext, total);
+    return Objects.hash(chomp, usda);
   }
 
   @Override
@@ -76,9 +62,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandedFoodObjectServing {\n");
     
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
+    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
     sb.append("}");
     return sb.toString();
   }
