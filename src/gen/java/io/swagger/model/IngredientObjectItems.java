@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectDietLabels;
-import io.swagger.model.BrandedFoodObjectPortions;
+import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
+import io.swagger.model.IngredientObjectPortions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import java.util.List;
@@ -16,8 +16,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:08:00.071Z[GMT]")public class IngredientObjectItems   {
-  private String name = null;  private List<String> categories = new ArrayList<String>();  private IngredientObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectComponents> components = new ArrayList<BrandedFoodObjectComponents>();  private List<BrandedFoodObjectPortions> portions = new ArrayList<BrandedFoodObjectPortions>();  private String commonNames = null;  private String description = null;  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:12:53.411Z[GMT]")public class IngredientObjectItems   {
+  private String name = null;  private List<String> categories = new ArrayList<String>();  private IngredientObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<IngredientObjectComponents> components = new ArrayList<IngredientObjectComponents>();  private List<IngredientObjectPortions> portions = new ArrayList<IngredientObjectPortions>();  private String commonNames = null;  private String description = null;  private String footnote = null;
 
   /**
    * Item name as provided by brand owner or as shown on packaging
@@ -99,10 +99,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
   
   @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
   @JsonProperty("components")
-  public List<BrandedFoodObjectComponents> getComponents() {
+  public List<IngredientObjectComponents> getComponents() {
     return components;
   }
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
+  public void setComponents(List<IngredientObjectComponents> components) {
     this.components = components;
   }
 
@@ -112,10 +112,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
   
   @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
   @JsonProperty("portions")
-  public List<BrandedFoodObjectPortions> getPortions() {
+  public List<IngredientObjectPortions> getPortions() {
     return portions;
   }
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
+  public void setPortions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
   }
 

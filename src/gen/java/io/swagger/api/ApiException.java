@@ -1,6 +1,6 @@
 package io.swagger.api;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:08:00.071Z[GMT]")public class ApiException extends Exception{
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:12:53.411Z[GMT]")public class ApiException extends Exception{
     private int code;
     public ApiException (int code, String msg) {
         super(msg);

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
@@ -13,7 +12,6 @@ import io.swagger.model.BrandedFoodObjectIngredients;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
-import io.swagger.model.BrandedFoodObjectPortions;
 import io.swagger.model.BrandedFoodObjectServing;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
@@ -22,8 +20,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:08:00.071Z[GMT]")public class BrandedFoodObjectItems   {
-  private String barcode = null;  private String name = null;  private String brand = null;  private BrandedFoodObjectIngredients ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private BrandedFoodObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<BrandedFoodObjectComponents> components = new ArrayList<BrandedFoodObjectComponents>();  private List<BrandedFoodObjectPortions> portions = new ArrayList<BrandedFoodObjectPortions>();  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private List<String> vitamins = new ArrayList<String>();  private String description = null;  private List<String> keywords = new ArrayList<String>();  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:12:53.411Z[GMT]")public class BrandedFoodObjectItems   {
+  private String barcode = null;  private String name = null;  private String brand = null;  private BrandedFoodObjectIngredients ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private BrandedFoodObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private List<String> vitamins = new ArrayList<String>();  private String description = null;  private List<String> keywords = new ArrayList<String>();  private String footnote = null;
 
   /**
    * EAN/UPC barcode
@@ -184,32 +182,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
   public void setPackagingPhotos(BrandedFoodObjectPackagingPhotos packagingPhotos) {
     this.packagingPhotos = packagingPhotos;
-  }
-
-  /**
-   * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-   **/
-  
-  @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
-  @JsonProperty("components")
-  public List<BrandedFoodObjectComponents> getComponents() {
-    return components;
-  }
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-  }
-
-  /**
-   * An array of objects containing information on discrete amounts of a food found in this item
-   **/
-  
-  @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
-  @JsonProperty("portions")
-  public List<BrandedFoodObjectPortions> getPortions() {
-    return portions;
-  }
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
   }
 
   /**
@@ -403,8 +375,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(dietLabels, brandedFoodObjectItems.dietLabels) &&
         Objects.equals(dietFlags, brandedFoodObjectItems.dietFlags) &&
         Objects.equals(packagingPhotos, brandedFoodObjectItems.packagingPhotos) &&
-        Objects.equals(components, brandedFoodObjectItems.components) &&
-        Objects.equals(portions, brandedFoodObjectItems.portions) &&
         Objects.equals(allergens, brandedFoodObjectItems.allergens) &&
         Objects.equals(brandList, brandedFoodObjectItems.brandList) &&
         Objects.equals(countries, brandedFoodObjectItems.countries) &&
@@ -422,7 +392,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
   }
 
   @Override
@@ -443,8 +413,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    dietFlags: ").append(toIndentedString(dietFlags)).append("\n");
     sb.append("    packagingPhotos: ").append(toIndentedString(packagingPhotos)).append("\n");
-    sb.append("    components: ").append(toIndentedString(components)).append("\n");
-    sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    allergens: ").append(toIndentedString(allergens)).append("\n");
     sb.append("    brandList: ").append(toIndentedString(brandList)).append("\n");
     sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
