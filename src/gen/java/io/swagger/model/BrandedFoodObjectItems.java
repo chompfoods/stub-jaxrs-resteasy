@@ -20,8 +20,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:12:53.411Z[GMT]")public class BrandedFoodObjectItems   {
-  private String barcode = null;  private String name = null;  private String brand = null;  private BrandedFoodObjectIngredients ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private BrandedFoodObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private List<String> vitamins = new ArrayList<String>();  private String description = null;  private List<String> keywords = new ArrayList<String>();  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:13:51.287Z[GMT]")public class BrandedFoodObjectItems   {
+  private String barcode = null;  private String name = null;  private String brand = null;  private BrandedFoodObjectIngredients ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private BrandedFoodObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private List<String> vitamins = new ArrayList<String>();  private String description = null;  private List<String> keywords = new ArrayList<String>();
 
   /**
    * EAN/UPC barcode
@@ -339,19 +339,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
     this.keywords = keywords;
   }
 
-  /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-   **/
-  
-  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
-  @JsonProperty("footnote")
-  public String getFootnote() {
-    return footnote;
-  }
-  public void setFootnote(String footnote) {
-    this.footnote = footnote;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -386,13 +373,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(traces, brandedFoodObjectItems.traces) &&
         Objects.equals(vitamins, brandedFoodObjectItems.vitamins) &&
         Objects.equals(description, brandedFoodObjectItems.description) &&
-        Objects.equals(keywords, brandedFoodObjectItems.keywords) &&
-        Objects.equals(footnote, brandedFoodObjectItems.footnote);
+        Objects.equals(keywords, brandedFoodObjectItems.keywords);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords);
   }
 
   @Override
@@ -425,7 +411,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
-    sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
     sb.append("}");
     return sb.toString();
   }
