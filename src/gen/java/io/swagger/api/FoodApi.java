@@ -31,7 +31,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:57:41.629Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T17:11:28.072Z[GMT]")public class FoodApi  {
 
     @Inject FoodApiService service;
 
