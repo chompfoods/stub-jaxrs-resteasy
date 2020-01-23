@@ -31,7 +31,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:15:58.386Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:57:41.629Z[GMT]")public class FoodApi  {
 
     @Inject FoodApiService service;
 
@@ -57,29 +57,6 @@ import javax.validation.constraints.*;
     public Response foodBrandedBarcodePhpGet( @NotNull  @QueryParam("code") String code,@Context SecurityContext securityContext)
     throws NotFoundException {
         return service.foodBrandedBarcodePhpGet(code,securityContext);
-    }
-    @GET
-    @Path("/branded/id.php")
-    
-    @Produces({ "application/json" })
-    @Operation(summary = "Get a branded food item using an ID number", description = "## Get data for a branded food using Chomp's internal ID number.  **Example** > ```https://chompthis.com/api/v2/food/branded/id.php?api_key=API_KEY&id=ID```  **Tips**   * Find a food's ID by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.   * Alternatively, set the \"source\" parameter to \"USDA\" and use the food's FDC ID. ", security = {
-        @SecurityRequirement(name = "ApiKeyAuth")
-    }, tags={  })
-    @ApiResponses(value = { 
-        @ApiResponse(responseCode = "200", description = "**Valid** - Will return an object containing any matching foods.  ", content = @Content(schema = @Schema(implementation = BrandedFoodObject.class))),
-        
-        @ApiResponse(responseCode = "400", description = "**Validation error** - Invalid parameters or request. "),
-        
-        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        
-        @ApiResponse(responseCode = "403", description = "**Forbidden** - Disallowed entity. "),
-        
-        @ApiResponse(responseCode = "404", description = "**Not found** - No food items exist that match your query parameters. "),
-        
-        @ApiResponse(responseCode = "500", description = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
-    public Response foodBrandedIdPhpGet( @NotNull  @QueryParam("id") Integer id,  @QueryParam("source") String source,@Context SecurityContext securityContext)
-    throws NotFoundException {
-        return service.foodBrandedIdPhpGet(id,source,securityContext);
     }
     @GET
     @Path("/branded/name.php")

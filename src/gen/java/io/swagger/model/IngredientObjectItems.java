@@ -16,8 +16,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:15:58.386Z[GMT]")public class IngredientObjectItems   {
-  private String name = null;  private List<String> categories = new ArrayList<String>();  private IngredientObjectNutrients nutrients = null;  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<IngredientObjectComponents> components = new ArrayList<IngredientObjectComponents>();  private List<IngredientObjectPortions> portions = new ArrayList<IngredientObjectPortions>();  private String commonNames = null;  private String description = null;  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-23T13:57:41.629Z[GMT]")public class IngredientObjectItems   {
+  private String name = null;  private List<String> categories = new ArrayList<String>();  private List<IngredientObjectNutrients> nutrients = new ArrayList<IngredientObjectNutrients>();  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<IngredientObjectComponents> components = new ArrayList<IngredientObjectComponents>();  private List<IngredientObjectPortions> portions = new ArrayList<IngredientObjectPortions>();  private String commonNames = null;  private String description = null;  private String footnote = null;
 
   /**
    * Item name as provided by brand owner or as shown on packaging
@@ -45,14 +45,15 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
 
   /**
+   * An array containing nutrient informatio objects for this food item
    **/
   
-  @Schema(description = "")
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
   @JsonProperty("nutrients")
-  public IngredientObjectNutrients getNutrients() {
+  public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 
