@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 @RequestScoped
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-24T13:22:21.935Z[GMT]")public class FoodApiServiceImpl implements FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-24T14:21:11.582Z[GMT]")public class FoodApiServiceImpl implements FoodApiService {
       public Response foodBrandedBarcodePhpGet(String code,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
