@@ -31,7 +31,7 @@ import javax.validation.constraints.*;
 @Path("/food")
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-24T14:21:11.582Z[GMT]")public class FoodApi  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-25T22:35:02.895Z[GMT]")public class FoodApi  {
 
     @Inject FoodApiService service;
 
@@ -47,7 +47,7 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "400", description = "**Validation error** - Invalid parameters or request. "),
         
-        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
+        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key, unauthorized access, or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
         @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
@@ -68,7 +68,7 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "400", description = "**Validation error** - Invalid parameters or request. "),
         
-        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
+        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key, unauthorized access, or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
         @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
@@ -89,7 +89,7 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "400", description = "**Validation error** - Invalid parameters or request. "),
         
-        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
+        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key, unauthorized access, or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
         @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
@@ -110,7 +110,7 @@ import javax.validation.constraints.*;
         
         @ApiResponse(responseCode = "400", description = "**Validation error** - Invalid parameters or request. "),
         
-        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
+        @ApiResponse(responseCode = "401", description = "**Unauthorized** - Invalid API key, unauthorized access, or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
         
         @ApiResponse(responseCode = "404", description = "**Not found** - No food items were found. "),
         
