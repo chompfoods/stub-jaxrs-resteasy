@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 @RequestScoped
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-27T21:16:22.725Z[GMT]")public class FoodApiServiceImpl implements FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-27T21:18:02.277Z[GMT]")public class FoodApiServiceImpl implements FoodApiService {
       public Response foodBrandedBarcodePhpGet(String code,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
@@ -32,7 +32,7 @@ import javax.ws.rs.core.SecurityContext;
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response foodIngredientSearchPhpGet(Integer find,Boolean raw,Integer limit,SecurityContext securityContext)
+      public Response foodIngredientSearchPhpGet(String find,Boolean raw,Integer limit,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
