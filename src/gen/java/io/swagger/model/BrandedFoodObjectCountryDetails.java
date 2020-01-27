@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing additional information on the countries where this item is found")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-25T22:35:02.895Z[GMT]")public class BrandedFoodObjectCountryDetails   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-27T21:16:22.725Z[GMT]")public class BrandedFoodObjectCountryDetails   {
   private Integer englishSpeaking = null;  private Integer nonEnglishSpeaking = null;
 
   /**

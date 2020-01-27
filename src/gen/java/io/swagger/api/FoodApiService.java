@@ -14,13 +14,13 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-25T22:35:02.895Z[GMT]")public interface FoodApiService {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-27T21:16:22.725Z[GMT]")public interface FoodApiService {
       Response foodBrandedBarcodePhpGet(String code,SecurityContext securityContext)
       throws NotFoundException;
       Response foodBrandedNamePhpGet(String name,Integer limit,Integer page,SecurityContext securityContext)
       throws NotFoundException;
       Response foodBrandedSearchPhpGet(String allergen,String brand,String category,String country,String diet,String ingredient,String keyword,String mineral,String nutrient,String palmOil,String trace,String vitamin,Integer limit,Integer page,SecurityContext securityContext)
       throws NotFoundException;
-      Response foodIngredientSearchPhpGet(Integer find,Boolean list,Boolean raw,Integer limit,SecurityContext securityContext)
+      Response foodIngredientSearchPhpGet(Integer find,Boolean raw,Integer limit,SecurityContext securityContext)
       throws NotFoundException;
 }
