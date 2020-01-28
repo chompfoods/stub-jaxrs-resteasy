@@ -15,8 +15,8 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-28T13:53:56.627Z[GMT]")public class IngredientObjectItems   {
-  private String name = null;  private List<String> categories = new ArrayList<String>();  private List<IngredientObjectNutrients> nutrients = new ArrayList<IngredientObjectNutrients>();  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private List<IngredientObjectComponents> components = new ArrayList<IngredientObjectComponents>();  private List<IngredientObjectPortions> portions = new ArrayList<IngredientObjectPortions>();  private String commonName = null;  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-28T14:07:15.813Z[GMT]")public class IngredientObjectItems   {
+  private String name = null;  private List<String> categories = new ArrayList<String>();  private List<IngredientObjectNutrients> nutrients = new ArrayList<IngredientObjectNutrients>();  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private List<IngredientObjectComponents> components = new ArrayList<IngredientObjectComponents>();  private List<IngredientObjectPortions> portions = new ArrayList<IngredientObjectPortions>();  private String commonName = null;  private String footnote = null;  private String searchTerm = null;  private String score = null;
 
   /**
    * Item name as provided by brand owner or as shown on packaging
@@ -133,6 +133,32 @@ import io.swagger.v3.oas.annotations.media.Schema;
     this.footnote = footnote;
   }
 
+  /**
+   * The original search term that found this food item.
+   **/
+  
+  @Schema(description = "The original search term that found this food item.")
+  @JsonProperty("search_term")
+  public String getSearchTerm() {
+    return searchTerm;
+  }
+  public void setSearchTerm(String searchTerm) {
+    this.searchTerm = searchTerm;
+  }
+
+  /**
+   * A value that represents how similar the name of this food item is to the original search term.
+   **/
+  
+  @Schema(description = "A value that represents how similar the name of this food item is to the original search term.")
+  @JsonProperty("score")
+  public String getScore() {
+    return score;
+  }
+  public void setScore(String score) {
+    this.score = score;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -151,12 +177,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(components, ingredientObjectItems.components) &&
         Objects.equals(portions, ingredientObjectItems.portions) &&
         Objects.equals(commonName, ingredientObjectItems.commonName) &&
-        Objects.equals(footnote, ingredientObjectItems.footnote);
+        Objects.equals(footnote, ingredientObjectItems.footnote) &&
+        Objects.equals(searchTerm, ingredientObjectItems.searchTerm) &&
+        Objects.equals(score, ingredientObjectItems.score);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, components, portions, commonName, footnote);
+    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, components, portions, commonName, footnote, searchTerm, score);
   }
 
   @Override
@@ -173,6 +201,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
+    sb.append("    searchTerm: ").append(toIndentedString(searchTerm)).append("\n");
+    sb.append("    score: ").append(toIndentedString(score)).append("\n");
     sb.append("}");
     return sb.toString();
   }
