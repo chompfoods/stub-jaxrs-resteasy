@@ -4,25 +4,21 @@ import java.util.Objects;
 import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
-import io.swagger.model.BrandedFoodObjectPortions;
 import io.swagger.model.BrandedFoodObjectServing;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.math.BigDecimal;
 import java.util.List;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-18T04:56:05.671Z[GMT]")public class BrandedFoodObjectItems   {
-  private String barcode = null;  private String name = null;  private String brand = null;  private String ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private BrandedFoodObjectNutrients nutrients = null;  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;  private BigDecimal proteinConversionFactor = null;  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<BrandedFoodObjectComponents> components = new ArrayList<BrandedFoodObjectComponents>();  private List<BrandedFoodObjectPortions> portions = new ArrayList<BrandedFoodObjectPortions>();  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private String commonName = null;  private String description = null;  private List<String> keywords = new ArrayList<String>();  private String footnote = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-30T02:08:15.907Z[GMT]")public class BrandedFoodObjectItems   {
+  private String barcode = null;  private String name = null;  private String brand = null;  private String ingredients = null;  private BrandedFoodObjectPackage _package = null;  private BrandedFoodObjectServing serving = null;  private List<String> categories = new ArrayList<String>();  private List<BrandedFoodObjectNutrients> nutrients = new ArrayList<BrandedFoodObjectNutrients>();  private BrandedFoodObjectDietLabels dietLabels = null;  private List<BrandedFoodObjectDietFlags> dietFlags = new ArrayList<BrandedFoodObjectDietFlags>();  private BrandedFoodObjectPackagingPhotos packagingPhotos = null;  private List<String> allergens = new ArrayList<String>();  private List<String> brandList = new ArrayList<String>();  private List<String> countries = new ArrayList<String>();  private BrandedFoodObjectCountryDetails countryDetails = null;  private List<String> palmOilIngredients = new ArrayList<String>();  private List<String> ingredientList = new ArrayList<String>();  private Boolean hasEnglishIngredients = null;  private List<String> minerals = new ArrayList<String>();  private List<String> traces = new ArrayList<String>();  private List<String> vitamins = new ArrayList<String>();  private String description = null;  private List<String> keywords = new ArrayList<String>();
 
   /**
    * EAN/UPC barcode
@@ -64,10 +60,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
 
   /**
-   * Ingredients in order of highest value to least
+   * This food item&#x27;s ingredients from greatest quantity to least
    **/
   
-  @Schema(description = "Ingredients in order of highest value to least")
+  @Schema(description = "This food item's ingredients from greatest quantity to least")
   @JsonProperty("ingredients")
   public String getIngredients() {
     return ingredients;
@@ -113,40 +109,16 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
 
   /**
+   * An array containing nutrient informatio objects for this food item
    **/
   
-  @Schema(description = "")
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
   @JsonProperty("nutrients")
-  public BrandedFoodObjectNutrients getNutrients() {
+  public List<BrandedFoodObjectNutrients> getNutrients() {
     return nutrients;
   }
-  public void setNutrients(BrandedFoodObjectNutrients nutrients) {
+  public void setNutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
-  }
-
-  /**
-   **/
-  
-  @Schema(description = "")
-  @JsonProperty("calorie_conversion_factor")
-  public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
-    return calorieConversionFactor;
-  }
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
-    this.calorieConversionFactor = calorieConversionFactor;
-  }
-
-  /**
-   * The multiplication factor used to calculate protein from nitrogen
-   **/
-  
-  @Schema(description = "The multiplication factor used to calculate protein from nitrogen")
-  @JsonProperty("protein_conversion_factor")
-  public BigDecimal getProteinConversionFactor() {
-    return proteinConversionFactor;
-  }
-  public void setProteinConversionFactor(BigDecimal proteinConversionFactor) {
-    this.proteinConversionFactor = proteinConversionFactor;
   }
 
   /**
@@ -184,32 +156,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
   public void setPackagingPhotos(BrandedFoodObjectPackagingPhotos packagingPhotos) {
     this.packagingPhotos = packagingPhotos;
-  }
-
-  /**
-   * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-   **/
-  
-  @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
-  @JsonProperty("components")
-  public List<BrandedFoodObjectComponents> getComponents() {
-    return components;
-  }
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-  }
-
-  /**
-   * An array of objects containing information on discrete amounts of a food found in this item
-   **/
-  
-  @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
-  @JsonProperty("portions")
-  public List<BrandedFoodObjectPortions> getPortions() {
-    return portions;
-  }
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
   }
 
   /**
@@ -329,16 +275,16 @@ import io.swagger.v3.oas.annotations.media.Schema;
   }
 
   /**
-   * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
+   * An array of vitamins that are found in this item
    **/
   
-  @Schema(description = "Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
-  @JsonProperty("common_name")
-  public String getCommonName() {
-    return commonName;
+  @Schema(description = "An array of vitamins that are found in this item")
+  @JsonProperty("vitamins")
+  public List<String> getVitamins() {
+    return vitamins;
   }
-  public void setCommonName(String commonName) {
-    this.commonName = commonName;
+  public void setVitamins(List<String> vitamins) {
+    this.vitamins = vitamins;
   }
 
   /**
@@ -367,19 +313,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
     this.keywords = keywords;
   }
 
-  /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-   **/
-  
-  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
-  @JsonProperty("footnote")
-  public String getFootnote() {
-    return footnote;
-  }
-  public void setFootnote(String footnote) {
-    this.footnote = footnote;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -398,13 +331,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(serving, brandedFoodObjectItems.serving) &&
         Objects.equals(categories, brandedFoodObjectItems.categories) &&
         Objects.equals(nutrients, brandedFoodObjectItems.nutrients) &&
-        Objects.equals(calorieConversionFactor, brandedFoodObjectItems.calorieConversionFactor) &&
-        Objects.equals(proteinConversionFactor, brandedFoodObjectItems.proteinConversionFactor) &&
         Objects.equals(dietLabels, brandedFoodObjectItems.dietLabels) &&
         Objects.equals(dietFlags, brandedFoodObjectItems.dietFlags) &&
         Objects.equals(packagingPhotos, brandedFoodObjectItems.packagingPhotos) &&
-        Objects.equals(components, brandedFoodObjectItems.components) &&
-        Objects.equals(portions, brandedFoodObjectItems.portions) &&
         Objects.equals(allergens, brandedFoodObjectItems.allergens) &&
         Objects.equals(brandList, brandedFoodObjectItems.brandList) &&
         Objects.equals(countries, brandedFoodObjectItems.countries) &&
@@ -414,15 +343,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
         Objects.equals(hasEnglishIngredients, brandedFoodObjectItems.hasEnglishIngredients) &&
         Objects.equals(minerals, brandedFoodObjectItems.minerals) &&
         Objects.equals(traces, brandedFoodObjectItems.traces) &&
-        Objects.equals(commonName, brandedFoodObjectItems.commonName) &&
+        Objects.equals(vitamins, brandedFoodObjectItems.vitamins) &&
         Objects.equals(description, brandedFoodObjectItems.description) &&
-        Objects.equals(keywords, brandedFoodObjectItems.keywords) &&
-        Objects.equals(footnote, brandedFoodObjectItems.footnote);
+        Objects.equals(keywords, brandedFoodObjectItems.keywords);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, commonName, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords);
   }
 
   @Override
@@ -438,13 +366,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    serving: ").append(toIndentedString(serving)).append("\n");
     sb.append("    categories: ").append(toIndentedString(categories)).append("\n");
     sb.append("    nutrients: ").append(toIndentedString(nutrients)).append("\n");
-    sb.append("    calorieConversionFactor: ").append(toIndentedString(calorieConversionFactor)).append("\n");
-    sb.append("    proteinConversionFactor: ").append(toIndentedString(proteinConversionFactor)).append("\n");
     sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    dietFlags: ").append(toIndentedString(dietFlags)).append("\n");
     sb.append("    packagingPhotos: ").append(toIndentedString(packagingPhotos)).append("\n");
-    sb.append("    components: ").append(toIndentedString(components)).append("\n");
-    sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    allergens: ").append(toIndentedString(allergens)).append("\n");
     sb.append("    brandList: ").append(toIndentedString(brandList)).append("\n");
     sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
@@ -454,10 +378,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
     sb.append("    hasEnglishIngredients: ").append(toIndentedString(hasEnglishIngredients)).append("\n");
     sb.append("    minerals: ").append(toIndentedString(minerals)).append("\n");
     sb.append("    traces: ").append(toIndentedString(traces)).append("\n");
-    sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
+    sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
-    sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
     sb.append("}");
     return sb.toString();
   }

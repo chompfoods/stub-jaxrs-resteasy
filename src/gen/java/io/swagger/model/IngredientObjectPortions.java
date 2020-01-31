@@ -10,7 +10,7 @@ import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description="An object containing information on a specific food portion found in this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-18T04:56:05.671Z[GMT]")public class BrandedFoodObjectPortions   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-30T02:08:15.907Z[GMT]")public class IngredientObjectPortions   {
   private String measurementUnit = null;  private String description = null;  private String modifier = null;  private BigDecimal gramWeight = null;  private Integer dataPoints = null;  private String footnote = null;
 
   /**
@@ -100,13 +100,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPortions brandedFoodObjectPortions = (BrandedFoodObjectPortions) o;
-    return Objects.equals(measurementUnit, brandedFoodObjectPortions.measurementUnit) &&
-        Objects.equals(description, brandedFoodObjectPortions.description) &&
-        Objects.equals(modifier, brandedFoodObjectPortions.modifier) &&
-        Objects.equals(gramWeight, brandedFoodObjectPortions.gramWeight) &&
-        Objects.equals(dataPoints, brandedFoodObjectPortions.dataPoints) &&
-        Objects.equals(footnote, brandedFoodObjectPortions.footnote);
+    IngredientObjectPortions ingredientObjectPortions = (IngredientObjectPortions) o;
+    return Objects.equals(measurementUnit, ingredientObjectPortions.measurementUnit) &&
+        Objects.equals(description, ingredientObjectPortions.description) &&
+        Objects.equals(modifier, ingredientObjectPortions.modifier) &&
+        Objects.equals(gramWeight, ingredientObjectPortions.gramWeight) &&
+        Objects.equals(dataPoints, ingredientObjectPortions.dataPoints) &&
+        Objects.equals(footnote, ingredientObjectPortions.footnote);
   }
 
   @Override
@@ -117,7 +117,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPortions {\n");
+    sb.append("class IngredientObjectPortions {\n");
     
     sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
