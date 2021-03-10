@@ -3,8 +3,7 @@ package io.swagger.api.impl;
 import io.swagger.api.*;
 import io.swagger.model.*;
 
-import io.swagger.model.BrandedFoodObject;
-import io.swagger.model.IngredientObject;
+import io.swagger.model.RecipeObject;
 
 import java.util.List;
 import io.swagger.api.NotFoundException;
@@ -16,23 +15,23 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 @RequestScoped
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2021-03-09T22:27:23.118Z[GMT]")public class FoodApiServiceImpl implements FoodApiService {
-      public Response foodBrandedBarcodePhpGet(String code,String userId,SecurityContext securityContext)
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2021-03-09T22:27:23.118Z[GMT]")public class RecipeApiServiceImpl implements RecipeApiService {
+      public Response recipeIdPhpGet(String id,String userId,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response foodBrandedNamePhpGet(String name,Integer limit,Integer page,String userId,SecurityContext securityContext)
+      public Response recipeIngredientPhpGet(String list,Integer limit,Integer page,String userId,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response foodBrandedSearchPhpGet(String allergen,String brand,String category,String country,String diet,String ingredient,String keyword,String mineral,String nutrient,String palmOil,String trace,String vitamin,Integer limit,Integer page,String userId,SecurityContext securityContext)
+      public Response recipeRandomPhpGet(Integer limit,String userId,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response foodIngredientSearchPhpGet(String find,Integer limit,String userId,SecurityContext securityContext)
+      public Response recipeSearchPhpGet(String title,String excludedCuisine,String includedCuisine,String excludedIngredient,String includedIngredient,Integer nutrientsRequired,Integer limit,Integer page,String userId,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();

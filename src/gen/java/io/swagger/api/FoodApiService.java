@@ -14,13 +14,13 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2020-01-30T02:08:15.907Z[GMT]")public interface FoodApiService {
-      Response foodBrandedBarcodePhpGet(String code,SecurityContext securityContext)
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaResteasyServerCodegen", date = "2021-03-09T22:27:23.118Z[GMT]")public interface FoodApiService {
+      Response foodBrandedBarcodePhpGet(String code,String userId,SecurityContext securityContext)
       throws NotFoundException;
-      Response foodBrandedNamePhpGet(String name,Integer limit,Integer page,SecurityContext securityContext)
+      Response foodBrandedNamePhpGet(String name,Integer limit,Integer page,String userId,SecurityContext securityContext)
       throws NotFoundException;
-      Response foodBrandedSearchPhpGet(String allergen,String brand,String category,String country,String diet,String ingredient,String keyword,String mineral,String nutrient,String palmOil,String trace,String vitamin,Integer limit,Integer page,SecurityContext securityContext)
+      Response foodBrandedSearchPhpGet(String allergen,String brand,String category,String country,String diet,String ingredient,String keyword,String mineral,String nutrient,String palmOil,String trace,String vitamin,Integer limit,Integer page,String userId,SecurityContext securityContext)
       throws NotFoundException;
-      Response foodIngredientSearchPhpGet(String find,Integer limit,SecurityContext securityContext)
+      Response foodIngredientSearchPhpGet(String find,Integer limit,String userId,SecurityContext securityContext)
       throws NotFoundException;
 }
